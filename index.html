@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1668/1668490.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title> <!-- Índice de massa corporal -->
+</head>
+<body>
+    <div>
+    <h1>Índice de massa corporal</h1>
+
+    <br><br>
+    <label for="Peso">Peso(kg)</label>
+    <input type="number" id="peso" name="peso">
+
+    <br><br>
+
+    <label for="Altura">Altura(Metros )</label>
+    <input type="number" id="altura" name="altura">
+
+    <br><br>
+
+    <button onclick="calcularImc()">Calcular</button>
+
+    <br><br><br><br>
+
+    <p>Seu índice de massa corporal é <span id="resultado"></span></p>
+
+    <img src="https://www.andrebraganhollipersonal.com.br/wp-content/uploads/2020/05/Tabela_IMC_AndreBraganholli.png" alt="">
+
+</div>
+    <script>
+        function calcularImc() {
+// usar o const pq o valor não irá mudar,vai ficar constante
+            const peso = window.document.getElementById('peso').value;
+
+            const altura = window.document.getElementById('altura').value;
+
+            const imc = peso / (altura**2);
+
+            document.getElementById('resultado').textContent = imc.toFixed(2);
+
+        }
+
+    </script>
+
+<footer>Created by Gabrielle Lourenço Moreira &copy</footer>
+
+</body>
+</html>
